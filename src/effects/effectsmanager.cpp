@@ -363,6 +363,13 @@ void EffectsManager::setup() {
     m_pEffectChainManager->addEffectChain(pChain);
 
     pChain = EffectChainPointer(new EffectChain(
+            this, "org.mixxx.effectchain.overdrive"));
+    pChain->setName(tr("Overdrive"));
+    pEffect = instantiateEffect("org.mixxx.effects.overdrive");
+    pChain->addEffect(pEffect);
+    m_pEffectChainManager->addEffectChain(pChain);
+
+    pChain = EffectChainPointer(new EffectChain(
             this, "org.mixxx.effectchain.filter"));
     pChain->setName(tr("Filter"));
     pEffect = instantiateEffect("org.mixxx.effects.filter");
