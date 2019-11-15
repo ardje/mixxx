@@ -220,6 +220,7 @@ add_library(mixxx-lib STATIC EXCLUDE_FROM_ALL
   src/effects/builtin/loudnesscontoureffect.cpp
   src/effects/builtin/metronomeeffect.cpp
   src/effects/builtin/moogladder4filtereffect.cpp
+  src/effects/builtin/overdriveeffect.cpp
   src/effects/builtin/parametriceqeffect.cpp
   src/effects/builtin/phasereffect.cpp
   src/effects/builtin/reverbeffect.cpp
