@@ -1,3 +1,4 @@
+#include <math.h>
 #include "effects/builtin/overdriveeffect.h"
 
 #include "util/sample.h"
@@ -30,12 +31,12 @@ EffectManifestPointer OverdriveEffect::getManifest() {
     depth->setSemanticHint(EffectManifestParameter::SemanticHint::UNKNOWN);
     depth->setUnitsHint(EffectManifestParameter::UnitsHint::UNKNOWN);
     depth->setDefaultLinkType(EffectManifestParameter::LinkType::LINKED);
-    depth->setDefaultLinkInversion(EffectManifestParameter::LinkInversion::INVERTED);
+    //depth->setDefaultLinkInversion(EffectManifestParameter::LinkInversion::INVERTED);
     depth->setNeutralPointOnScale(1.0);
     depth->setDefault(1.0);
     // we do not allow a 0 gain in case we need to /gain
-    depth->setMinimum(0.1);
-    depth->setMaximum(16);
+    depth->setMinimum(1.0f/64);
+    depth->setMaximum(64.0f);
 
     return pManifest;
 }
@@ -65,6 +66,6 @@ void OverdriveEffect::processChannel(const ChannelHandle& handle,
             i < bufferParameters.samplesPerBuffer();
             i += 1) {
 	    // tanh already clamps, but we are probably going to add postgain
-        pOutput[i] = SampleUtil::clampSample(tanh(pInput[i]*gain));
+        pOutput[i] = tanhf(pInput[i]*gain)/1.4f;
     }
 }
