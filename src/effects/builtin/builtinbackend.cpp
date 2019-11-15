@@ -4,6 +4,7 @@
 #include "effects/builtin/builtinbackend.h"
 #include "effects/builtin/flangereffect.h"
 #include "effects/builtin/bitcrushereffect.h"
+#include "effects/builtin/overdriveeffect.h"
 #include "effects/builtin/balanceeffect.h"
 #include "effects/builtin/linkwitzriley8eqeffect.h"
 #include "effects/builtin/bessel8lvmixeqeffect.h"
@@ -41,6 +42,7 @@ BuiltInBackend::BuiltInBackend(QObject* pParent)
     registerEffect<FilterEffect>();
     registerEffect<MoogLadder4FilterEffect>();
     registerEffect<BitCrusherEffect>();
+    registerEffect<OverdriveEffect>();
     registerEffect<BalanceEffect>();
     // Fancy effects
     registerEffect<FlangerEffect>();
