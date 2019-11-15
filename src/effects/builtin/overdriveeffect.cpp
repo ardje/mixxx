@@ -25,7 +25,7 @@ EffectManifestPointer OverdriveEffect::getManifest() {
     depth->setName(QObject::tr("Tanh pregain"));
     depth->setShortName(QObject::tr("Tanh pregain"));
     depth->setDescription(QObject::tr(
-        "The gain with which the input signal is multiplied");
+        "The gain with which the input signal is multiplied"));
     depth->setControlHint(EffectManifestParameter::ControlHint::KNOB_LOGARITHMIC);
     depth->setSemanticHint(EffectManifestParameter::SemanticHint::UNKNOWN);
     depth->setUnitsHint(EffectManifestParameter::UnitsHint::UNKNOWN);
