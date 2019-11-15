@@ -797,6 +797,7 @@ class MixxxCore(Feature):
 
                    "src/effects/builtin/builtinbackend.cpp",
                    "src/effects/builtin/bitcrushereffect.cpp",
+                   "src/effects/builtin/overdriveeffect.cpp",
                    "src/effects/builtin/balanceeffect.cpp",
                    "src/effects/builtin/linkwitzriley8eqeffect.cpp",
                    "src/effects/builtin/bessel4lvmixeqeffect.cpp",

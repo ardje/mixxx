@@ -8,6 +8,7 @@
 #include "effects/builtin/bessel4lvmixeqeffect.h"
 #include "effects/builtin/bessel8lvmixeqeffect.h"
 #include "effects/builtin/bitcrushereffect.h"
+#include "effects/builtin/overdriveeffect.h"
 #include "effects/builtin/echoeffect.h"
 #include "effects/builtin/filtereffect.h"
 #include "effects/builtin/flangereffect.h"
@@ -83,6 +84,7 @@ FOR_COMMON_BUFFER_SIZES(BENCHMARK(BM_BuiltInEffects_DefaultParameters_##EffectNa
 DECLARE_EFFECT_BENCHMARK(Bessel4LVMixEQEffect)
 DECLARE_EFFECT_BENCHMARK(Bessel8LVMixEQEffect)
 DECLARE_EFFECT_BENCHMARK(BitCrusherEffect)
+DECLARE_EFFECT_BENCHMARK(OverdriveEffect)
 DECLARE_EFFECT_BENCHMARK(EchoEffect)
 DECLARE_EFFECT_BENCHMARK(FilterEffect)
 DECLARE_EFFECT_BENCHMARK(FlangerEffect)
