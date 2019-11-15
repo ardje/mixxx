@@ -65,6 +65,6 @@ void OverdriveEffect::processChannel(const ChannelHandle& handle,
             i < bufferParameters.samplesPerBuffer();
             i += 1) {
 	    // tanh already clamps, but we are probably going to add postgain
-        pOutput[i] = SampleUtil::clampSample(tanh(pInput[i]*gain))
+        pOutput[i] = SampleUtil::clampSample(tanh(pInput[i]*gain));
     }
 }
